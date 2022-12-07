@@ -1,0 +1,23 @@
+<div>
+    <p></p>
+    <h3>Update product</h3>
+
+    <form novalidate ng-submit="updateProduct()">
+        <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input type="text" class="form-control" placeholder="Title" ng-model="update_product.title">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Price</label>
+            <input type="number" class="form-control" placeholder="Price" ng-model="update_product.price">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Category Title</label>
+            <select class="form-select" ng-model="update_product.categoryTitle">
+                <option ng-repeat="category in categories.data">{{category.title}}</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>

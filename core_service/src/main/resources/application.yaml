@@ -1,0 +1,30 @@
+server:
+  port: 8189
+  servlet:
+    context-path: /market-core
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5435/core
+    hikari:
+      username: postgres
+      password: postgres
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL94Dialect
+  liquibase:
+    change-log: classpath:/db/changelog/changelog-master.yaml
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: my_market
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8090/realms/market-realm
+jwt:
+  secret: kl4njk34j234j23jk4njk23n4j234jn23kjn4qwnrjknl;;'gdjjr235ml;
+  lifetime: 3600000

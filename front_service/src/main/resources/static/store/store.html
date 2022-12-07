@@ -1,0 +1,47 @@
+<div>
+    <h2>Product catalog</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <td>ID</td>
+            <td>Title</td>
+            <td>Price</td>
+            <td>Category</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="product in productsPage.content">
+            <td>{{product.id}}</td>
+            <td>{{product.title}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.categoryTitle}}</td>
+            <td>
+                <button type="button" class="btn btn-primary" ng-click="deleteProduct(product)">Delete</button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-primary" ng-click="navToEditProductPage(product.id)">Change
+                </button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-primary" ng-click="addToCart(product)">addToCart</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item">
+                <button id="previewButton" type="button" class="page-link" ng-click="previewPage()">Preview</button>
+            </li>
+            <li class="page-item" ng_repeat="pageIndex in paginationArray">
+                <button class="page-link" ng-click="loadProducts(pageIndex)">{{pageIndex}}</button>
+            </li>
+            <li class="page-item">
+                <button id="nextButton" type="button" class="page-link" ng-click="nextPage()">Next</button>
+            </li>
+        </ul>
+    </nav>
+</div>

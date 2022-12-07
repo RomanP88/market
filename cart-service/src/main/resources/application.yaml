@@ -1,0 +1,19 @@
+server:
+  port: 8187
+  servlet:
+    context-path: /market-cart
+utils:
+  cart:
+    prefix: WEB_MARKET_
+integration:
+  core-service:
+    url: http://localhost:5555/core
+#springdoc:
+#  swagger-ui:
+#    path: http://localhost:8187/api-docs
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8090/realms/market-realm

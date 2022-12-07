@@ -1,0 +1,27 @@
+<div>
+    <p></p>
+    <h3>Create user</h3>
+    <form novalidate ng-submit="createNewUser()">
+        <div class="mb-3">
+            <label class="form-label">Username</label>
+            <input type="text" class="form-control" placeholder="Username" ng-model="new_user.username">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" placeholder="Password" ng-model="new_user.password">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="text" class="form-control" placeholder="Email" ng-model="profile.email">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">FirstName</label>
+            <input type="text" class="form-control" placeholder="FirstName" ng-model="profile.firstName">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">LastName</label>
+            <input type="text" class="form-control" placeholder="LastName" ng-model="profile.lastName">
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</div>
